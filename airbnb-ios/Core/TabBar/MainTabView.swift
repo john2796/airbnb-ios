@@ -9,7 +9,29 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            Text("Explore")
+                .tabItem {
+                    Label("Explore", systemImage: "magnifyingglass")
+                }
+            
+            Text("Wish list")
+                .tabItem {
+                    Label("Wishlists", systemImage: "heart.fill")
+                }
+            
+            Text("Profile")
+                .tabItem {
+                   Label("Profile", systemImage: "person")
+                }
+        }
+        .onAppear {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            
+            UITabBar.appearance().standardAppearance = appearance
+        }
+        .tint(.pink)
     }
 }
 
