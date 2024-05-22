@@ -10,12 +10,12 @@ import SwiftUI
 
 
 extension View {
-    func cardStyle(in color: Color = .accentColor) ->
-    some View {
+    func cardStyle(in color: Color = .white) -> some View {
         return modifier(Card(bgColor: color))
     }
-    
+
     func dropShadow() -> some View {
         return modifier(DropShadow())
     }
 }
+
