@@ -56,22 +56,22 @@ enum ListingFeature: Int, Codable, Identifiable, Hashable {
 
     var title: String {
         switch self {
-        case .selfCheckin: "Self Check-in"
-        case .superHost: "Superhost"
+        case .selfCheckin: return "Self Check-in"
+        case .superHost: return "Superhost"
         }
     }
 
     var subTitle: String {
         switch self {
-        case .selfCheckin: "Check yourself in with the keypad."
-        case .superHost: "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests"
+        case .selfCheckin: return "Check yourself in with the keypad."
+        case .superHost: return "Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests"
         }
     }
 
     var imageName: String {
         switch self {
-        case .selfCheckin: "door.left.hand.open"
-        case .superHost: "medal"
+        case .selfCheckin: return "door.left.hand.open"
+        case .superHost: return "medal"
         }
     }
 }
@@ -92,27 +92,27 @@ enum ListingAmenity: Int, Codable, Identifiable, Hashable {
 
     var title: String {
         switch self {
-        case .pool: "Pool"
-        case .kitchen: "Kitchen"
-        case .wifi: "Wifi"
-        case .laundry: "Laundry"
-        case .tv: "TV"
-        case .alarmSystem: "Alarm System"
-        case .office: "Office"
-        case .balcony: "Balcony"
+        case .pool: return "Pool"
+        case .kitchen: return "Kitchen"
+        case .wifi: return "Wifi"
+        case .laundry: return "Laundry"
+        case .tv: return "TV"
+        case .alarmSystem: return "Alarm System"
+        case .office: return "Office"
+        case .balcony: return "Balcony"
         }
     }
 
     var imageName: String {
         switch self {
-        case .pool: "figure.pool.swim"
-        case .kitchen: "fork.knife"
-        case .wifi: "wifi"
-        case .laundry: "washer"
-        case .tv: "tv"
-        case .alarmSystem: "checkerboard.shield"
-        case .office: "pencil.and.ruler.fill"
-        case .balcony: "building"
+        case .pool: return "figure.pool.swim"
+        case .kitchen: return "fork.knife"
+        case .wifi: return "wifi"
+        case .laundry: return "washer"
+        case .tv: return "tv"
+        case .alarmSystem: return "checkerboard.shield"
+        case .office: return "pencil.and.ruler.fill"
+        case .balcony: return "building"
         }
     }
 }
@@ -125,10 +125,10 @@ enum ListingType: Int, Codable, Identifiable, Hashable {
 
     var description: String {
         switch self {
-        case .apartment: "Apartment"
-        case .house: "House"
-        case .townHouse: "Town House"
-        case .villa: "Villa"
+        case .apartment: return "Apartment"
+        case .house: return "House"
+        case .townHouse: return "Town House"
+        case .villa: return "Villa"
         }
     }
 
