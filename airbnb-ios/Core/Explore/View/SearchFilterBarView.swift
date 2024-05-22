@@ -22,7 +22,7 @@ struct SearchFilterBarView: View {
                         .font(.footnote)
                         .fontWeight(.bold)
                     
-                    Text("\(viewModel.searchLocation.isEmpty ? "Anywherer - " : "")Any Week - Add Guests")
+                    Text("\(viewModel.searchLocation.isEmpty ? "Anywhere - " : "")Any Week - Add Guests")
                         .font(.caption2)
                         .foregroundStyle(.gray)
                 }
@@ -40,7 +40,7 @@ struct SearchFilterBarView: View {
         }
         .padding(.horizontal)
         .padding(.vertical, 10)
-        .background(.foreground)
+        .foregroundStyle(.foreground)
         .clipShape(Capsule())
         .overlay {
             Capsule()
@@ -54,7 +54,7 @@ struct SearchFilterBarView: View {
 
 struct SearchFilterBarView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchFilterBarView(viewModel: <#T##ExploreViewModel#>(with: MockExploreServiceImp()))
+        SearchFilterBarView(viewModel: ExploreViewModel(with: MockExploreServiceImp()))
     }
 }
 
