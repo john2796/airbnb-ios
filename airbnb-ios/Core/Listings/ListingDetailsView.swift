@@ -72,9 +72,9 @@ struct ListingDetailsView: View {
 
             Divider()
             
-            // self checkin & superhost info
+            // listing features
             VStack(alignment: .leading, spacing: 16) {
-                ForEach(0 ..< 2) { feature in
+                ForEach(0 ..< 2, id: \.self) { feature in
                     HStack(spacing: 8) {
                         Image(systemName: "medal")
                         
@@ -93,9 +93,54 @@ struct ListingDetailsView: View {
             .padding()
             
             
-            // where you'll sleep, horizontal list 
+            Divider()
+            
+            // beedrooms view
+            VStack(alignment: .leading, spacing: 16) {
+                Text("Where you'll sleep")
+                    .font(.headline)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 16) {
+                        ForEach( 1 ..< 5, id: \.self) { bedroom in
+                            VStack(alignment: .leading, spacing: 8) {
+                                Image(systemName: "bed.double")
+                                Text("Beedrom \(bedroom)")
+                                    .font(.footnote)
+                                    .fontWeight(.semibold)
+                            }
+                            .frame(width: 132, height: 100)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(lineWidth: 1)
+                                    .foregroundStyle(.gray)
+                            }
+                        }
+                    }
+                }
+            }
+            .padding()
             
             Divider()
+            
+            // listing amenities
+            VStack(alignment: .leading, spacing: 16) {
+                Text("What this place offers")
+
+                ForEach(0 ..< 4, id: \.self) { feature in
+                    HStack {
+                        Image(systemName: "wifi")
+                            .frame(width: 32)
+                        Text("Wifi")
+                            .font(.footnote)
+                        Spacer()
+                    }
+                }
+            }
+            .padding()
+            
+//            Divider()
+           
         }
     }
 }
