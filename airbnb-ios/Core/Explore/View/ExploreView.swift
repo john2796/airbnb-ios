@@ -14,10 +14,17 @@ struct ExploreView: View {
     @State private var showDestinationSearchView = false
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        // search bar
-        
-        // listings
+        NavigationStack {
+            ScrollView {
+                LazyVStack(spacing: 32) {
+                    ForEach(0 ... 10, id: \.self) { listing in
+                        ListingItemView()
+                            .frame(height: 400)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                    }
+                }
+            }
+        }
     }
 }
 

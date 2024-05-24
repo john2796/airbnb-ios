@@ -13,7 +13,6 @@
 		5219DB912BFC8054006B8BA0 /* ExploreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5219DB902BFC8054006B8BA0 /* ExploreService.swift */; };
 		5219DB932BFC808A006B8BA0 /* mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5219DB922BFC808A006B8BA0 /* mocks.swift */; };
 		52AC8A752BFC672A00F101C9 /* airbnb_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC8A742BFC672A00F101C9 /* airbnb_iosApp.swift */; };
-		52AC8A792BFC672A00F101C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52AC8A782BFC672A00F101C9 /* Assets.xcassets */; };
 		52AC8A7C2BFC672A00F101C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52AC8A7B2BFC672A00F101C9 /* Preview Assets.xcassets */; };
 		52AC8A902BFC6B2700F101C9 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC8A8F2BFC6B2700F101C9 /* MainTabView.swift */; };
 		52BAAA6A2BFEEA4100CB8A5C /* ListingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BAAA692BFEEA4100CB8A5C /* ListingItemView.swift */; };
@@ -24,6 +23,7 @@
 		52C61C972BFDB05A00F12CFD /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C61C962BFDB05A00F12CFD /* Card.swift */; };
 		52C61C992BFDB0BD00F12CFD /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C61C982BFDB0BD00F12CFD /* DropShadow.swift */; };
 		52C61C9B2BFDBA2500F12CFD /* DestinationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C61C9A2BFDBA2500F12CFD /* DestinationSearchView.swift */; };
+		52DB80762C0031EE00102522 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DB80752C0031EE00102522 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,6 @@
 		5219DB922BFC808A006B8BA0 /* mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mocks.swift; sourceTree = "<group>"; };
 		52AC8A712BFC672A00F101C9 /* airbnb-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "airbnb-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AC8A742BFC672A00F101C9 /* airbnb_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airbnb_iosApp.swift; sourceTree = "<group>"; };
-		52AC8A782BFC672A00F101C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52AC8A7B2BFC672A00F101C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52AC8A8F2BFC6B2700F101C9 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		52BAAA692BFEEA4100CB8A5C /* ListingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingItemView.swift; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		52C61C962BFDB05A00F12CFD /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		52C61C982BFDB0BD00F12CFD /* DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
 		52C61C9A2BFDBA2500F12CFD /* DestinationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchView.swift; sourceTree = "<group>"; };
+		52DB80752C0031EE00102522 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../ios-copy/airbnb-ios/Airbnb Clone/Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,7 @@
 				52AC8A842BFC6ACC00F101C9 /* Core */,
 				52AC8A832BFC6AC400F101C9 /* Components */,
 				52AC8A822BFC6AB000F101C9 /* App */,
-				52AC8A782BFC672A00F101C9 /* Assets.xcassets */,
+				52DB80752C0031EE00102522 /* Assets.xcassets */,
 				52AC8A7A2BFC672A00F101C9 /* Preview Content */,
 			);
 			path = "airbnb-ios";
@@ -301,7 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52AC8A7C2BFC672A00F101C9 /* Preview Assets.xcassets in Resources */,
-				52AC8A792BFC672A00F101C9 /* Assets.xcassets in Resources */,
+				52DB80762C0031EE00102522 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

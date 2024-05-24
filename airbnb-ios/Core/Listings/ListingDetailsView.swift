@@ -28,6 +28,22 @@ struct ListingDetailsView: View {
     
     
     var body: some View {
+        ScrollView(.vertical) {
+            // image carousel
+            
+            
+            // property details
+            
+            // host info
+            
+            // listing features
+            
+            // room details
+            
+            // amenities
+            
+            // map view
+        }
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
@@ -39,38 +55,40 @@ struct ListingDetailsView_Previews: PreviewProvider {
 }
 
 private struct PropertyDetailsView: View {
+    var title: String
     var rating: Double
     var numReviews: Int
     var city: String
     var state: String
-    var title: String
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-           Text(title)
+            Text(title)
                 .font(.title)
                 .bold()
-            
+
             VStack(alignment: .leading, spacing: 4) {
-                HStack {
-                // ratings
-                Image(systemName: "star.fill")
-                Text(rating)
-                    .fontWeight(.bold)
-                
-                Text(" - ")
-                
-                // reviews
-                Text("\(numReviews) reviews")
-                    .fontWeight(.semibold) // make text bold
-                    .underline()
+                HStack(spacing: 2) {
+                    // ratings
+                    Image(systemName: "star.fill")
+//                    Text(rating)
+                        .fontWeight(.bold)
+
+                    Text(" - ")
+
+                    // reviews
+                    Text("\(numReviews) reviews")
+                        .fontWeight(.semibold)
+                        .underline()
+                }
+                .foregroundStyle(.foreground)
+
+                // location
+                Text("\(city), \(state)")
             }
-            .foregroundStyle(.foreground)
-            
-            // location
-            Text("\(city), \(state)")
-            }
+            .font(.caption)
         }
-        .font(.caption)
+        .frame(maxWidth: .infinity, alignment: .leading) // align left
+        .padding()
     }
 }
