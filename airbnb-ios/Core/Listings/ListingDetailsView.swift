@@ -9,86 +9,99 @@ import SwiftUI
 import MapKit
 
 struct ListingDetailsView: View {
-    @Environment(\.dismiss) var dismiss
-    var listing: Listing
-    
-    // state
-//    @State private var cameraPosition: MapCameraPosition
-//
-//    init(listing: Listing) {
-//        self.listing = listing
-//
-//        // set up map area
-//        let center = CLLocationCoordinate2D(latitude: listing.latitude, longitude: listing.longitude)
-//
-//        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-//
-//        let region = MKCoordinateRegion(center: center, span: span)
-//       self._cameraPosition = State(initialValue: .region(region))    }
-    
     
     var body: some View {
-        ScrollView(.vertical) {
-            // image carousel
+        ScrollView() {
+            ListingImageCarouselView()
+                .frame(height: 320)
             
             
-            // property details
+            // location & rating info
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Miami Villa")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                
+                VStack(alignment: .leading) {
+                    HStack {
+                        Image(systemName: "star.fill")
+                        Text("4.86")
+                        Text("-")
+                        Text("28 reviews")
+                            .underline()
+                            .fontWeight(.semibold)
+                    }
+                    .foregroundStyle(.black)
+                    
+                    Text("Miami, Florida")
+                }
+                .font(.caption)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.leading)
             
-            // host info
             
-            // listing features
+            Divider()
             
-            // room details
+            // host info view
+            HStack {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Entire villa hosted by John Smith")
+                        .font(.headline)
+                        .frame(width: 250, alignment: .leading)
+                    
+                    HStack(spacing: 2) {
+                        Text("4 guests -")
+                        Text("4 bedrooms -")
+                        Text("4 beds -")
+                        Text("3 baths")
+                    }
+                    .font(.caption)
+                }
+                .frame(width: 300, alignment: .leading)
+                
+                Spacer()
+                
+                   Image("male-5")
+                    .resizable()
+                    .frame(width: 64, height: 64)
+                    .scaledToFill()
+                    .clipShape(Circle())
+            }
+            .padding()
+
+            Divider()
             
-            // amenities
+            // self checkin & superhost info
+            VStack(alignment: .leading, spacing: 16) {
+                ForEach(0 ..< 2) { feature in
+                    HStack(spacing: 8) {
+                        Image(systemName: "medal")
+                        
+                        VStack(alignment: .leading) {
+                            Text("Superhost")
+                                .font(.footnote)
+                                .fontWeight(.semibold)
+                            Text("Superhosts are experience, highly rated hosts who are commited to providing great stars for guests")
+                                .font(.caption)
+                                .foregroundStyle(.gray)
+                        }
+                        Spacer()
+                    }
+                }
+            }
+            .padding()
             
-            // map view
+            
+            // where you'll sleep, horizontal list 
+            
+            Divider()
         }
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 struct ListingDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ListingDetailsView(listing: Mock.listings[0])
-    }
-}
-
-private struct PropertyDetailsView: View {
-    var title: String
-    var rating: Double
-    var numReviews: Int
-    var city: String
-    var state: String
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(title)
-                .font(.title)
-                .bold()
-
-            VStack(alignment: .leading, spacing: 4) {
-                HStack(spacing: 2) {
-                    // ratings
-                    Image(systemName: "star.fill")
-//                    Text(rating)
-                        .fontWeight(.bold)
-
-                    Text(" - ")
-
-                    // reviews
-                    Text("\(numReviews) reviews")
-                        .fontWeight(.semibold)
-                        .underline()
-                }
-                .foregroundStyle(.foreground)
-
-                // location
-                Text("\(city), \(state)")
-            }
-            .font(.caption)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading) // align left
-        .padding()
+        ListingDetailsView()
     }
 }

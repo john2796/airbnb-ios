@@ -24,6 +24,7 @@
 		52C61C992BFDB0BD00F12CFD /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C61C982BFDB0BD00F12CFD /* DropShadow.swift */; };
 		52C61C9B2BFDBA2500F12CFD /* DestinationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C61C9A2BFDBA2500F12CFD /* DestinationSearchView.swift */; };
 		52DB80762C0031EE00102522 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DB80752C0031EE00102522 /* Assets.xcassets */; };
+		52DB80782C0046C900102522 /* ListingImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB80772C0046C900102522 /* ListingImageCarouselView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		52C61C982BFDB0BD00F12CFD /* DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
 		52C61C9A2BFDBA2500F12CFD /* DestinationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchView.swift; sourceTree = "<group>"; };
 		52DB80752C0031EE00102522 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../ios-copy/airbnb-ios/Airbnb Clone/Assets.xcassets"; sourceTree = "<group>"; };
+		52DB80772C0046C900102522 /* ListingImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingImageCarouselView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +119,6 @@
 				52AC8A862BFC6ADB00F101C9 /* Models */,
 				52AC8A852BFC6AD300F101C9 /* Extensions */,
 				52AC8A842BFC6ACC00F101C9 /* Core */,
-				52AC8A832BFC6AC400F101C9 /* Components */,
 				52AC8A822BFC6AB000F101C9 /* App */,
 				52DB80752C0031EE00102522 /* Assets.xcassets */,
 				52AC8A7A2BFC672A00F101C9 /* Preview Content */,
@@ -144,6 +145,7 @@
 		52AC8A832BFC6AC400F101C9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				52DB80772C0046C900102522 /* ListingImageCarouselView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -151,6 +153,7 @@
 		52AC8A842BFC6ACC00F101C9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				52AC8A832BFC6AC400F101C9 /* Components */,
 				52AC8A8E2BFC6B1600F101C9 /* Root */,
 				52AC8A8D2BFC6B1200F101C9 /* Profile */,
 				52AC8A8C2BFC6B0C00F101C9 /* MapView */,
@@ -327,6 +330,7 @@
 				5219DB8D2BFC74F7006B8BA0 /* MockExploreServiceImpl.swift in Sources */,
 				52C61C992BFDB0BD00F12CFD /* DropShadow.swift in Sources */,
 				52C61C972BFDB05A00F12CFD /* Card.swift in Sources */,
+				52DB80782C0046C900102522 /* ListingImageCarouselView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
