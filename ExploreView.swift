@@ -2,24 +2,19 @@
 //  ExploreView.swift
 //  airbnb-ios
 //
-//  Created by john benedict miranda on 5/20/24.
+//  Created by john benedict miranda on 6/10/24.
 //
 
 import SwiftUI
 
 struct ExploreView: View {
-    // inject view model
-    
-    // bool to toggle destination search
-    @State private var showDestinationSearchView = false
-    
     var body: some View {
         NavigationStack {
             ScrollView {
-                SearchFilterBarView()
+                SearchAndFilterBar()
                 
                 LazyVStack(spacing: 32) {
-                    ForEach(0 ... 10, id: \.self) { listing in
+                    ForEach(0 ... 10, id:\.self) { listing in
                         NavigationLink(value: listing) {
                             ListingItemView()
                                 .frame(height: 400)
@@ -27,16 +22,15 @@ struct ExploreView: View {
                         }
                     }
                 }
-                .navigationDestination(for: Int.self){ listing in
-                    Text("Listing detail view...")
+                .padding()
             }
-          }
+            .navigationDestination(for: Int.self) { listing in
+                    Text("listing destination .....")
+            }
         }
     }
 }
 
-struct ExploreView_Previews: PreviewProvider {
-    static var previews: some View {
-        ExploreView()
-    }
+#Preview {
+    ExploreView()
 }

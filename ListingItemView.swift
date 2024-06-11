@@ -1,20 +1,33 @@
 //
-//  ListingItemView.swift
+//  ListingView.swift
 //  airbnb-ios
 //
-//  Created by john benedict miranda on 5/22/24.
+//  Created by john benedict miranda on 6/10/24.
 //
 
 import SwiftUI
 
 struct ListingItemView: View {
-  
+    let images = [
+        "listing-1",
+        "listing-2",
+        "listing-3",
+        "listing-4",
+        "listing-5",
+    ]
     var body: some View {
         VStack(spacing: 8) {
-            // slide view images
-           ListingImageCarouselView()
+            // images
+            TabView {
+                ForEach(images, id: \.self) { image in
+                        Image(image)
+                        .resizable()
+                        .scaledToFill()
+                }
+            }
             .frame(height: 320)
             .clipShape(RoundedRectangle(cornerRadius: 10))
+            .tabViewStyle(.page)
             
             // listing details
             HStack(alignment: .top) {
@@ -27,19 +40,17 @@ struct ListingItemView: View {
                         .foregroundStyle(.gray)
                     Text("Nov 3 - 10")
                         .foregroundStyle(.gray)
-                    
                     HStack(spacing: 4) {
                         Text("$567")
                             .fontWeight(.semibold)
                         Text("night")
+
                     }
+                    .foregroundStyle(.black)
                 }
-                .foregroundStyle(.black)
-                
-                Spacer() // make space in middle like flexbox justify-content: space-between
-                
+                Spacer() // to make them space-between
                 // rating
-                HStack(spacing: 2){
+                HStack(spacing:2) {
                     Image(systemName: "star.fill")
                     Text("4.86")
                 }
@@ -47,12 +58,9 @@ struct ListingItemView: View {
             }
             .font(.footnote)
         }
-        .padding()
     }
 }
 
-struct ListingItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListingItemView()
-    }
+#Preview {
+    ListingItemView()
 }

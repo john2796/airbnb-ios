@@ -1,19 +1,16 @@
 //
-//  SearchFilterBarView.swift
+//  SearchAndFilterBar.swift
 //  airbnb-ios
 //
-//  Created by john benedict miranda on 5/21/24.
+//  Created by john benedict miranda on 6/10/24.
 //
 
 import SwiftUI
 
-struct SearchFilterBarView: View {
- 
-    
+struct SearchAndFilterBar: View {
     var body: some View {
         HStack {
             Image(systemName: "magnifyingglass")
-            
             VStack(alignment: .leading, spacing: 2) {
                 Text("Where to?")
                     .font(.footnote)
@@ -23,29 +20,26 @@ struct SearchFilterBarView: View {
                     .font(.caption2)
                     .foregroundStyle(.gray)
             }
-            
             Spacer()
             
-            Button(action: {}, label: {
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                 Image(systemName: "line.3.horizontal.decrease.circle")
                     .foregroundStyle(.black)
             })
+            
         }
         .padding(.horizontal)
         .padding(.vertical, 10)
         .overlay {
             Capsule()
                 .stroke(lineWidth: 0.5)
-                .foregroundColor(Color(.systemGray4))
-                .shadow(color:.black.opacity(0.4), radius: 2)
+                .foregroundStyle(Color(.systemGray4))
+                .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.4), radius:2)
         }
         .padding()
     }
 }
 
-struct SearchFilterBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchFilterBarView()
-    }
+#Preview {
+    SearchAndFilterBar()
 }
-
